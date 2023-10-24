@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { PreviewItem } from '../types';
-import { DragEndEvent, DragStartEvent } from '@dnd-kit/core';
-import { arrayMove } from '@dnd-kit/sortable';
+import { useState } from "react";
+import { PreviewItem } from "../types";
+import { DragEndEvent, DragStartEvent } from "@dnd-kit/core";
+import { arrayMove } from "@dnd-kit/sortable";
 
 interface useDragAndDropProps {
   previewItems: PreviewItem[];
@@ -31,6 +31,7 @@ const useDragAndDrop = ({ previewItems }: useDragAndDropProps) => {
       setItems((items) => arrayMove(items, oldIndex, newIndex));
     }
   };
+
   return {
     handleDragStart,
     handleDragEnd,

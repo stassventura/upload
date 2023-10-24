@@ -1,26 +1,27 @@
-import { useRef } from 'react';
+import { ChangeEvent, useRef } from "react";
 
 interface UploadAreaProps {
-  handleFileUpload: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleFileUpload: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const UploadArea = ({ handleFileUpload }: UploadAreaProps) => {
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null!);
   const triggerFileInput = () => {
-    fileInputRef.current?.click();
+    fileInputRef.current.click();
   };
 
   return (
     <div className="upload-area">
       <button
         onClick={triggerFileInput}
-        className="w-[306px] h-[78px] bg-[#87d534] text-white text-lg font-medium rounded-lg hover:bg-[#68a329]">
+        className="w-[306px] h-[78px] bg-[#87d534] text-white text-lg font-medium rounded-lg hover:bg-[#68a329]"
+      >
         Add File
       </button>
       <input
         ref={fileInputRef}
         type="file"
-        style={{ display: 'none' }}
+        className="hidden"
         multiple
         onChange={handleFileUpload}
       />

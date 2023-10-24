@@ -1,7 +1,12 @@
-export type PreviewItem = {
+export type CommonItemParams = {
   id: string;
-  src?: string;
-  color?: string;
-  ext?: string;
-  name?: string;
+  name: string;
 };
+export interface PreviewImage extends CommonItemParams {
+  src: string;
+}
+export interface PreviewFile extends CommonItemParams {
+  ext: string;
+}
+
+export type PreviewItem = PreviewImage | PreviewFile;
