@@ -1,4 +1,4 @@
-import { ChangeEvent, useRef } from "react";
+import { ChangeEvent, useRef } from 'react';
 
 interface UploadAreaProps {
   handleFileUpload: (event: ChangeEvent<HTMLInputElement>) => void;
@@ -14,8 +14,7 @@ const UploadArea = ({ handleFileUpload }: UploadAreaProps) => {
     <div className="upload-area">
       <button
         onClick={triggerFileInput}
-        className="w-[306px] h-[78px] bg-[#87d534] text-white text-lg font-medium rounded-lg hover:bg-[#68a329]"
-      >
+        className="w-80 h-20 bg-green text-white text-lg font-medium rounded-lg hover:bg-hover_green">
         Add File
       </button>
       <input

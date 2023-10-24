@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className="container max-w-6xl bg-white mx-auto border-4 border-[#dcdcdc] rounded-lg h-[333px] flex items-center justify-center">
+      <div className="container max-w-6xl bg-white mx-auto border-4 border-border rounded-lg h-80 flex items-center justify-center">
         {files.length === 0 ? (
           <UploadArea handleFileUpload={handleFileUpload} />
         ) : (
